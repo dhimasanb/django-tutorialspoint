@@ -9,4 +9,6 @@ def index(request):
 
 def hello(request):
    today = datetime.datetime.now().date()
-   return render(request, "hello.html", {"today" : today})
+
+   daysOfWeek = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+   return render(request, "hello.html", {"today" : today, "days_of_week" : daysOfWeek})
